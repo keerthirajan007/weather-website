@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
   value[0].innerHTML = "";
   address = input.value;
   message[0].innerHTML = "Loading... please wait";
-  fetch(`http://localhost:8000/weather?address=${address}`).then((response) => {
+  fetch(`/weather?address=${address}`).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         console.log(data.error);

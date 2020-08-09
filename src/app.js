@@ -5,6 +5,7 @@ const hbs = require("hbs");
 const geocode = require("./Geocode");
 const forecast = require("./forecast");
 
+const port = process.env.PORT || 8000;
 const app = express();
 
 // configure paths
@@ -58,6 +59,6 @@ app.get("*", (req, res) => {
   res.render("error", { title: "404 error page not found" });
 });
 // create a localhost port
-app.listen(8000, () => {
-  console.log("server is on the port 8000");
+app.listen(port, () => {
+  console.log("server is on the port " + port);
 });
