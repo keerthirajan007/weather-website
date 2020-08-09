@@ -1,5 +1,7 @@
 console.log("main.js is called");
 const value = document.getElementsByClassName("val");
+console.log("All files are work well");
+
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 const message = document.getElementsByClassName("message");
