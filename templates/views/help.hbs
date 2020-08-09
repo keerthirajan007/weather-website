@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    {{>links}}
+    <br>
+    <h3>To find an weather information</h3>
+    <ol>
+        <li>Enter the location name in location box</li>
+        <li>Press the search button</li>
+        <li>see the information</li>
+    </ol>
+    <h3>Errors</h3>
+    <ol>
+        <p class="message p1">Unable to connect location services,no access to service</p>
+        <p> It means your browser didn't able to connect the server,it is may be lack of internet connection or other
+            things like firewall settings,vpn services</p>
+        <p> In order to overcome the issues, please! check your internet connection(check the ethernet wires connected
+            correctly or not,check wi-fi whether it turned on or not)</p>
+        <p> If the error continues,then check the firewall and vpn settings</p>
+        <p class="message p1">Unable to find the location,address is invalid</p>
+        <p> If this error would appears,after you were entered the address,it refers the address which you provided is
+            not correct (always try a city name not a places like buildings)</p>
+    </ol>
+    {{>footer}}
+</body>
+
+</html>

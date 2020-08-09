@@ -1,0 +1,74 @@
+body {
+  text-align: center;
+  color: #333333;
+  font-family: arial;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px;
+  color: #888888;
+}
+header {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+h1 {
+  font-size: 64px;
+}
+a {
+  text-decoration: none;
+  color: #888888;
+  margin-right: 16px;
+}
+input:hover {
+  background-color: white;
+}
+input {
+  font-family: "Fira code";
+  font-style: bold;
+  font-weight: 500;
+  border: 1px solid #cccccc;
+  padding: 8px;
+  background-color: rgb(245, 245, 245);
+}
+button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  padding: 8px;
+  color: white;
+}
+ol {
+  text-align: left;
+}
+
+.p1 {
+  font-family: "Fira code";
+  padding: 10px;
+  border: 1px solid rgb(220, 234, 245);
+  border-radius: 5px;
+  height: fit-content;
+  color: blue;
+  background-color: rgb(220, 234, 245);
+}
+table {
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(220, 234, 245);
+  width: max-content;
+  margin-left: 180px;
+  padding: 10px;
+  /* margin-right: 150px; */
+  border: 2px solid #fcfcfcea;
+  border-radius: 10px;
+}
+b {
+  color: rgba(7, 11, 49, 0.767);
+}
