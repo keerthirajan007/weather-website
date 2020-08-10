@@ -40,6 +40,14 @@ form.addEventListener("submit", (e) => {
             <td>: ${data[0].Longitude}</td>
         </tr>
         <tr>
+        <td><b>Timezone</b></td>
+        <td>: ${data[1].Timezone}</td>
+        </tr>
+        <tr>
+<td><b>Place Time</b></td>
+<td>: ${data[1].PlaceTime}</td>
+</tr>
+        <tr>
             <td><b>Weather</b></td>
             <td>: ${data[1].Weather}</td>
         </tr>
@@ -55,11 +63,11 @@ form.addEventListener("submit", (e) => {
             <td><b>Temperature(K)</b></td>
             <td>: ${data[1].Temperature}</td>
         </tr> <tr>
-        <td><b>Date</b></td>
+        <td><b>Your Date</b></td>
         <td>: ${data[1].Date}</td>
     </tr>
     <tr>
-    <td><b>Time</b></td>
+    <td><b>Your Time</b></td>
     <td>: ${data[1].Time}</td>
 </tr>
     </table>`;

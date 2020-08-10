@@ -10,6 +10,13 @@ const forecast = ({ Latitude, Longitude }, callback) => {
     } else if (response.body.error || response.body.weather === undefined) {
       callback("Unable to find the location,address is invalid");
     } else {
+      const hour_min = (seconds) => {
+        var temp = seconds / 60;
+        var hour = `${temp / 60}`.split(".")[0];
+        var min = temp % 60;
+        return { hour: hour, min: min };
+      };
+      const timezone = hour_min(response.body.timezone);
       const date = new Date();
       date.setMonth(8);
       var day = {
@@ -30,6 +37,10 @@ const forecast = ({ Latitude, Longitude }, callback) => {
         Place: response.body.name,
         Date: `${day.day}-${day.month}-${day.year}`,
         Time: `${time.hour}:${time.min}:${time.sec}`,
+        Timezone: `${timezone.hour}h:${timezone.min}m`,
+        PlaceTime: `${date.getUTCHours() + Number(timezone.hour)}:${
+          date.getUTCMinutes() + timezone.min
+        }`,
         Units: "Temperature=Kelvin , Pressure=Pa , Humidity=grams/cubic meter",
       });
     }
