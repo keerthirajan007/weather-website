@@ -54,7 +54,14 @@ form.addEventListener("submit", (e) => {
         <tr>
             <td><b>Temperature(K)</b></td>
             <td>: ${data[1].Temperature}</td>
-        </tr>
+        </tr> <tr>
+        <td><b>Date</b></td>
+        <td>: ${data[1].Date}</td>
+    </tr>
+    <tr>
+    <td><b>Time</b></td>
+    <td>: ${data[1].Time}</td>
+</tr>
     </table>`;
       }
     });
