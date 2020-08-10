@@ -4,28 +4,28 @@ body {
   font-family: arial;
   max-width: 650px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 footer {
   position: fixed;
   bottom: 0px;
   right: 0px;
   border-top: 1px solid #eeeeee;
-  margin-top: 16px;
-  padding: 16px;
+  margin-top: 1rem;
+  padding: 1rem;
   color: #888888;
 }
 header {
-  margin-top: 16px;
-  margin-bottom: 48px;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
 }
 a {
   text-decoration: none;
   color: #888888;
-  margin-right: 16px;
+  margin-right: 1rem;
 }
 input:hover {
   background-color: white;
@@ -35,14 +35,14 @@ input {
   font-style: bold;
   font-weight: 500;
   border: 1px solid #cccccc;
-  padding: 8px;
+  padding: 0.5rem;
   background-color: rgb(245, 245, 245);
 }
 button {
   cursor: pointer;
   border: 1px solid #888888;
   background: #888888;
-  padding: 8px;
+  padding: 0.5rem;
   color: white;
 }
 ol {
@@ -63,7 +63,7 @@ table {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(220, 234, 245);
   width: max-content;
-  margin-left: 180px;
+  margin-left: 11rem;
   padding: 10px;
   /* margin-right: 150px; */
   border: 2px solid #fcfcfcea;
