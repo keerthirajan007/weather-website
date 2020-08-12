@@ -66,7 +66,7 @@ app.get("/get/ip/address", function (req, res) {
     req.socket.remoteAddress ||
     req.connection.socket.remoteAddress;
   var geo = geoip.lookup(ip);
-  var GEO = geoip.lookup(req.connection.remoteAddress);
+  var GEO = geoip.lookup(`${req.connection.remoteAddress}`);
 
   res.send([{ ip: ip }, geo, GEO]);
 });
