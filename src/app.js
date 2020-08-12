@@ -54,6 +54,24 @@ app.get("/weather", (req, res) => {
     });
   }
 });
+app.get("/weather/gps", (req, res) => {
+  if (!req.query.lat && req.query.lon) {
+    return res.send({ error: "You must provide both latitude and longitude" });
+  } else {
+    var a = [];
+    forecast.forecast(
+      { Latitude: req.query.lat, Longitude: req.query.lon },
+      (erro, respons) => {
+        if (erro) {
+          return res.send({ error: erro });
+        } else {
+          a.push(respons);
+          res.send(a);
+        }
+      }
+    );
+  }
+});
 app.get("/help/*", (req, res) => {
   res.render("error", { title: "help article not found" });
 });
