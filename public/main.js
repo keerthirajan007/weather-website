@@ -13,7 +13,7 @@ message[0].innerHTML =
 input.addEventListener("onclick", () => {
   input.style.background = "white";
 });
-gps.addEventListener("click", (e) => {
+gps.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("success");
   if (navigator.geolocation) {
