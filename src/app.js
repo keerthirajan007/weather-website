@@ -5,7 +5,7 @@ const hbs = require("hbs");
 const geocode = require("./Geocode");
 const forecast = require("./forecast");
 const geoip = require("geoip-lite");
-const maxmind = require("maxmind");
+const request = require("request");
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -66,8 +66,9 @@ app.get("/get/ip/address", function (req, res) {
     req.socket.remoteAddress ||
     req.connection.socket.remoteAddress;
   var geo = geoip.lookup(ip);
+  var GEO = geoip.lookup(request.connection.remoteAddress);
 
-  res.send([{ ip: ip }, geo]);
+  res.send([{ ip: ip }, geo, GEO]);
 });
 app.get("*", (req, res) => {
   res.render("error", { title: "404 error page not found" });
