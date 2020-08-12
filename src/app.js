@@ -66,9 +66,7 @@ app.get("/get/ip/address", function (req, res) {
     req.socket.remoteAddress ||
     req.connection.socket.remoteAddress;
   var geo = geoip.lookup(ip);
-  maxmind.open('/path/to/GeoLite2-City.mmdb').then((lookup) => {
-    res.send(lookup.get(ip),geo);
-});
+  res.send([{ ip: ip },geo])
 
 app.get("*", (req, res) => {
   res.render("error", { title: "404 error page not found" });
