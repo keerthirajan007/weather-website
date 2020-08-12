@@ -4,7 +4,7 @@ const path = require("path");
 const hbs = require("hbs");
 const geocode = require("./Geocode");
 const forecast = require("./forecast");
-const geoip=require("geoip-lite")
+const geoip = require("geoip-lite");
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -64,7 +64,7 @@ app.get("/get/ip/address", function (req, res) {
     req.connection.remoteAddress ||
     req.socket.remoteAddress ||
     req.connection.socket.remoteAddress;
-  ver geo=geoip.lookup(ip)
+  var geo = geoip.lookup(ip);
   res.send(geo);
 });
 
