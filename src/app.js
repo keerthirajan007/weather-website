@@ -56,6 +56,17 @@ app.get("/help/*", (req, res) => {
   res.render("error", { title: "help article not found" });
 });
 
+app.get("/get/ip/address", function (req, res) {
+  // need access to IP address here
+  var ip =
+    (req.headers["x-forwarded-for"] || "").split(",").pop().trim() ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;
+  console.log(ip);
+  res.send(ip);
+});
+
 app.get("*", (req, res) => {
   res.render("error", { title: "404 error page not found" });
 });

@@ -19,6 +19,12 @@ const forecast = ({ Latitude, Longitude }, callback) => {
       const timezone = hour_min(response.body.timezone);
       const date = new Date();
       date.setMonth(8);
+      hours = date.getUTCHours() + Number(timezone.hour);
+      mins = date.getUTCMinutes() + timezone.min;
+      if (mins >= 60) {
+        hours += 1;
+        mins = mins - 60;
+      }
       var day = {
         day: date.getDate(),
         month: date.getMonth(),
@@ -38,9 +44,7 @@ const forecast = ({ Latitude, Longitude }, callback) => {
         Date: `${day.day}-${day.month}-${day.year}`,
         Time: `${time.hour}:${time.min}:${time.sec}`,
         Timezone: `${timezone.hour}h:${timezone.min}m`,
-        PlaceTime: `${date.getUTCHours() + Number(timezone.hour)}:${
-          date.getUTCMinutes() + timezone.min
-        }`,
+        PlaceTime: `${hours}:${mins}`,
         Units: "Temperature=Kelvin , Pressure=Pa , Humidity=grams/cubic meter",
       });
     }
