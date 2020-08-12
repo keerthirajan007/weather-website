@@ -13,7 +13,8 @@ message[0].innerHTML =
 input.addEventListener("onclick", () => {
   input.style.background = "white";
 });
-gps.addEventListener("click", () => {
+gps.addEventListener("click", (e) => {
+  e.preventDefault();
   console.log("success");
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
